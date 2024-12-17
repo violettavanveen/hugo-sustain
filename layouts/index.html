@@ -1,10 +1,16 @@
 {{ define "main" }}
   {{ partial "header" . }}
+<style>
+.avatar img {
+  max-width: 250px;
+  height: auto;
+}
 
+</style>
   <section id="about">
     <div class="container">
       <div class="avatar mb-5">
-        <img class="rounded-circle" src="{{ .Site.Params.avatar }}" alt="Responsive image">
+        <img class="rounded-circle img-fluid" src="{{ .Site.Params.avatar }}" alt="Responsive image">
       </div>
       {{ .Content }}
       {{ partial "social.html" . }}
